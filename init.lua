@@ -100,6 +100,7 @@ vim.g.have_nerd_font = false
 
 -- Make line numbers default
 vim.opt.number = true
+vim.opt.relativenumber = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
 -- vim.opt.relativenumber = true
@@ -156,6 +157,12 @@ vim.opt.scrolloff = 10
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
+vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
+
+vim.keymap.set('n', 'j', 'jzz', { desc = 'jump and center screen' })
+vim.keymap.set('n', 'k', 'kzz', { desc = 'jump up and center screen' })
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
@@ -747,6 +754,11 @@ require('lazy').setup({
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
     'folke/tokyonight.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
+    config = function()
+      require('tokyonight').setup {
+        transparent = true,
+      }
+    end,
     init = function()
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
