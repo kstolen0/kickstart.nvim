@@ -77,6 +77,19 @@ vim.keymap.set('n', 'j', 'jzz', { desc = 'jump and center screen' })
 vim.keymap.set('n', 'k', 'kzz', { desc = 'jump up and center screen' })
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
+vim.keymap.set('n', 'G', 'Gzz')
+vim.keymap.set('n', '``', '``zz')
+vim.keymap.set('n', '`.', '`.zz')
+
+-- manage terminal
+vim.keymap.set('n', '<leader>t', function()
+  vim.cmd.terminal()
+end, { desc = 'open terminal' })
+
+-- close current buffer
+vim.keymap.set('n', '<leader>bd', function()
+  vim.cmd.bdelete()
+end, { desc = 'delete current buffer' })
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
