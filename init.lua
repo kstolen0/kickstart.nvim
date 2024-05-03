@@ -81,6 +81,13 @@ vim.keymap.set('n', 'G', 'Gzz')
 vim.keymap.set('n', '``', '``zz')
 vim.keymap.set('n', '`.', '`.zz')
 
+-- first option taken from here: https://gitlab.com/linuxdabbler/dotfiles/-/blob/main/.config/nvim/init.lua?ref_type=heads
+-- second option is my own thinking.. not too sure what the differenve is. the Behaviour seems the same
+vim.keymap.set('v', 'K', ":m '>-2<CR>gv=gv")
+vim.keymap.set('v', 'J', "$:'<,'>m+1<CR>v")
+
+vim.keymap.set('i', 'kj', '<Esc>')
+
 -- manage terminal
 vim.keymap.set('n', '<leader>t', function()
   vim.cmd.terminal()
