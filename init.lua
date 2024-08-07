@@ -71,7 +71,7 @@ vim.opt.scrolloff = 10
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
-vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
+vim.keymap.set('n', '<leader>pv', ':w<CR>:Ex<CR>')
 
 vim.keymap.set('n', 'j', 'jzz', { desc = 'jump and center screen' })
 vim.keymap.set('n', 'k', 'kzz', { desc = 'jump up and center screen' })
