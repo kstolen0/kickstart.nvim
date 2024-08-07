@@ -85,19 +85,13 @@ vim.keymap.set('n', 'G', 'Gzz')
 vim.keymap.set('n', '``', '``zz')
 vim.keymap.set('n', '`.', '`.zz')
 
--- split buffer navigation
-vim.keymap.set('n', '<leader>vs', ':vsplit<CR>')
-vim.keymap.set('n', '<leader>hs', ':split<CR>')
-vim.keymap.set('n', '<leader>wq', '<C-w>q')
-vim.keymap.set('n', '<C-Left>', ':vertical resize +3<CR>')
-vim.keymap.set('n', '<C-Right>', ':vertical resize -3<CR>')
-vim.keymap.set('n', '<C-Up>', ':horizontal resize +3<CR>')
-vim.keymap.set('n', '<C-Down>', ':horizontal resize -3<CR>')
-
 -- first option taken from here: https://gitlab.com/linuxdabbler/dotfiles/-/blob/main/.config/nvim/init.lua?ref_type=heads
 -- second option is my own thinking.. not too sure what the differenve is. the Behaviour seems the same
 vim.keymap.set('v', 'K', ":m '>-2<CR>gv=gv")
 vim.keymap.set('v', 'J', "$:'<,'>m+1<CR>v")
+
+-- yanking controls
+vim.keymap.set('n', 'yp', '"0p')
 
 vim.keymap.set('i', 'kj', '<Esc>:w<CR>')
 vim.keymap.set('i', '<Esc>', '<Esc>:w<CR>')
