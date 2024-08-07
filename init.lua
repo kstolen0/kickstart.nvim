@@ -19,10 +19,6 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.title = true
 
--- You can also add relative line numbers, to help with jumping.
---  Experiment for yourself to see if you like it!
--- vim.opt.relativenumber = true
-
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
 
@@ -93,8 +89,10 @@ vim.keymap.set('v', 'J', "$:'<,'>m+1<CR>v")
 -- yanking controls
 vim.keymap.set('n', 'yp', '"0p')
 
+-- saving controls
 vim.keymap.set('i', 'kj', '<Esc>:w<CR>')
 vim.keymap.set('i', '<Esc>', '<Esc>:w<CR>')
+vim.keymap.set('n', '<leader>kj', 'kj:w<CR>')
 
 -- manage terminal
 vim.keymap.set('n', '<leader>t', function()
