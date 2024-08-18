@@ -60,6 +60,9 @@ vim.opt.splitbelow = true
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
+-- set the number of columns occupied by a tab character
+vim.opt.tabstop = 4
+
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = 'split'
 
@@ -73,13 +76,14 @@ vim.opt.scrolloff = 10
 --  See `:help vim.keymap.set()`
 vim.keymap.set('n', '<leader>pv', ':w<CR>:Ex<CR>')
 
-vim.keymap.set('n', 'j', 'jzz', { desc = 'jump and center screen' })
-vim.keymap.set('n', 'k', 'kzz', { desc = 'jump up and center screen' })
+vim.keymap.set('n', 'j', 'jzz')
+vim.keymap.set('n', 'k', 'kzz')
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', 'G', 'Gzz')
 vim.keymap.set('n', '``', '``zz')
 vim.keymap.set('n', '`.', '`.zz')
+vim.keymap.set('n', '%', '%zz')
 
 -- first option taken from here: https://gitlab.com/linuxdabbler/dotfiles/-/blob/main/.config/nvim/init.lua?ref_type=heads
 -- second option is my own thinking.. not too sure what the differenve is. the Behaviour seems the same
