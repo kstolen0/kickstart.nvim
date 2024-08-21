@@ -3,7 +3,7 @@ return {
   event = 'VeryLazy',
   opts = {
     enabled = true,
-    data_format = '%r',
+    date_format = '%r',
     virtual_text_column = 1,
   },
 }
