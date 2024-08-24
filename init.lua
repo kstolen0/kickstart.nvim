@@ -93,6 +93,10 @@ vim.keymap.set('v', 'J', "$:'<,'>m+1<CR>v")
 -- yanking controls
 vim.keymap.set('n', 'yp', '"0p')
 
+-- upper and lowercase word
+vim.keymap.set('n', '<leader>uc', 'gUiw')
+vim.keymap.set('n', '<leader>lc', 'guiw')
+
 -- saving controls
 vim.keymap.set('i', 'kj', '<Esc>:w<CR>')
 vim.keymap.set('i', '<Esc>', '<Esc>:w<CR>')
