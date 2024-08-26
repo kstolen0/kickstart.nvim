@@ -74,7 +74,9 @@ vim.opt.scrolloff = 10
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
-vim.keymap.set('n', '<leader>pv', ':w<CR>:Ex<CR>')
+-- vim.keymap.set('n', '<leader>pv', ':Ex<CR>')
+
+vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 
 vim.keymap.set('n', 'j', 'jzz')
 vim.keymap.set('n', 'k', 'kzz')
