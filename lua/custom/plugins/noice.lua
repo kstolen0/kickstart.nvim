@@ -1,3 +1,4 @@
+-- plugin for cmd ui popup
 return {
   'folke/noice.nvim',
   event = 'VeryLazy',

@@ -1,3 +1,5 @@
+-- plugin for simplifying navigation between nvim and tmux panels
+-- requires corresponding plugin in tmux to work
 return {
   'alexghergh/nvim-tmux-navigation',
   config = function()

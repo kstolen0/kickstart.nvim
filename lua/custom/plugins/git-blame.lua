@@ -1,3 +1,4 @@
+-- plugin for displaying change history on lines of code
 return {
   'f-person/git-blame.nvim',
   event = 'VeryLazy',

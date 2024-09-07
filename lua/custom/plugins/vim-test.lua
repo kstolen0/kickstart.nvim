@@ -1,3 +1,4 @@
+-- plugin for running tests within nvim
 return {
   'vim-test/vim-test',
   dependencies = {

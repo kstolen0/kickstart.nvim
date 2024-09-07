@@ -1,3 +1,4 @@
+-- file manager for nvim
 return {
   'stevearc/oil.nvim',
   opts = {},

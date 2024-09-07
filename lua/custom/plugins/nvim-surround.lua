@@ -1,3 +1,4 @@
+-- plugin for simplifying how to modify surrounding brackets/quotes/etc around a piece of text
 return {
   'kylechui/nvim-surround',
   version = '*', -- Use for stability; omit to use `main` branch for the latest features
